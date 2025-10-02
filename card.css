@@ -1,0 +1,72 @@
+.flip-card {
+    background-color: transparent;
+    width: 300px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */ /* Remove this if you don't want the 3D effect */
+    margin: 20px; /* Spacing between cards */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    border-radius: 20px
+}
+
+.flip-card-front {
+    background-color: #ffffff;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #dddddd;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back button {
+    margin-top: 20px;
+}
+
+.card-img-top {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-title,
+.card-text {
+    text-align: center;
+}
+
+.card-body {
+  flex-grow: 1; /* Allow card body to expand and push content to the bottom */
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+}
