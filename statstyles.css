@@ -1,0 +1,49 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+body {
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Use min-height for flexibility */
+}
+
+main {
+    flex: 1; /* Allows main to expand to fill available space */
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically */
+    min-height: 0; /* Remove any previous height settings */
+}
+
+.jumbotron {
+    background-color: #ffffff;
+    padding: 2rem;
+    width: fit-content; /* Adjust width as needed */
+    max-width: 90%; /* Prevent overflow on smaller screens */
+}
+
+.card-body {
+    color: rgb(49, 49, 49);
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+.navbar-brand {
+    color:rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+}
